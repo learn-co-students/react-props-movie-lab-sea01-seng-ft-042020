@@ -17,6 +17,8 @@ export default class CardBack extends Component {
     } else {
       return <h4>No Rating Found</h4>
     }
+
+
   }
 
   render() {
@@ -24,6 +26,8 @@ export default class CardBack extends Component {
       <div className="card-back">
         <h3 className="title">{this.props.title}</h3>
         <span />
+        {/* Can either reference the function or use ternary operator. Ternary doesn't require an outside function (ternary = condition ? true : false) */}
+        {/* this.props.IMDBRating != null ? <img src={imgMapper[this.props.IMDBRating]} alt="IMDB Rating" /> : <h4>No Rating Found</h4> */}
         { this.generateRatingElement() }
         <span />
         <h5 className="genres">{this.props.genres.join(', ')}</h5>
